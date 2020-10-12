@@ -2,8 +2,11 @@
 // Created by toliman on 05.10.2020.
 //
 
-signed main() {
+#include "task5.h"
 
+
+signed main() {
+    cout << endl;
 
     return 0;
 }
