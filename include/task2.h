@@ -9,8 +9,6 @@
 
 using namespace std;
 
-vector<unsigned long long> primes(96509884, 0);
-
 bool checkPrime(unsigned int value);
 
 unsigned long long nPrime(unsigned n);

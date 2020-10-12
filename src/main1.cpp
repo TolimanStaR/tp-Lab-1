@@ -7,7 +7,7 @@
 using namespace std;
 
 signed main() {
-    cout << findValue(1, 25) << endl;
+    cout << findValue(1, 20) << endl;
 
     return 0;
 }
