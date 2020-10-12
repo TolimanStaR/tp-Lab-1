@@ -13,6 +13,7 @@ vector<unsigned long long> getPrimes() {
 
     table[0] = 0;
     table[1] = 0;
+    
     for (unsigned long long i = 2; i * i <= 500000; ++i) {
         for (unsigned long long j = i * i; j < 500000; j += i) {
             table[j] = 0;
