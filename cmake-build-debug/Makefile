@@ -429,7 +429,6 @@ src/task2.o: src/task2.cpp.o
 # target to build an object file
 src/task2.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2_lib.dir/build.make CMakeFiles/task2_lib.dir/src/task2.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_lib.dir/build.make CMakeFiles/task3_lib.dir/src/task2.cpp.o
 .PHONY : src/task2.cpp.o
 
 src/task2.i: src/task2.cpp.i
@@ -439,7 +438,6 @@ src/task2.i: src/task2.cpp.i
 # target to preprocess a source file
 src/task2.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2_lib.dir/build.make CMakeFiles/task2_lib.dir/src/task2.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_lib.dir/build.make CMakeFiles/task3_lib.dir/src/task2.cpp.i
 .PHONY : src/task2.cpp.i
 
 src/task2.s: src/task2.cpp.s
@@ -449,7 +447,6 @@ src/task2.s: src/task2.cpp.s
 # target to generate assembly for a file
 src/task2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2_lib.dir/build.make CMakeFiles/task2_lib.dir/src/task2.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_lib.dir/build.make CMakeFiles/task3_lib.dir/src/task2.cpp.s
 .PHONY : src/task2.cpp.s
 
 src/task3.o: src/task3.cpp.o

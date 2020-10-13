@@ -9,4 +9,6 @@
 
 using namespace std;
 
+void split(char ***result, int *N, char *buf, char ch);
+
 #endif //TASK1_TASK5_H
