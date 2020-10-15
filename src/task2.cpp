@@ -34,4 +34,3 @@ unsigned long long nextPrime(unsigned long long value) {
         if (prime) return digit;
     }
 }
-

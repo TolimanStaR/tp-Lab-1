@@ -2,7 +2,7 @@
 // Created by toliman on 05.10.2020.
 //
 
-#include "../include/task5.h"
+#include "task5.h"
 
 void split(char ***result, int *N, char *buf, char ch) {
 
@@ -19,6 +19,7 @@ void split(char ***result, int *N, char *buf, char ch) {
             last = i;
         }
     }
+
     vector<int> lengths;
     last = 0;
 

@@ -15,9 +15,10 @@ char *sum(char *x, char *y) {
 
     int remaining = 0;
     int summation_result;
-    
+
     for (int i = 0; i < length; ++i) {
         summation_result = remaining;
+        remaining = 0;
         if (first_length - 1 - i > -1) summation_result += x[first_length - 1 - i] - '0';
         if (second_length - 1 - i > -1) summation_result += y[second_length - 1 - i] - '0';
         if (summation_result > 9) {
