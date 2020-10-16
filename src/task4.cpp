@@ -11,7 +11,7 @@ char *sum(char *x, char *y) {
     int first_length = strlen(x), second_length = strlen(y);
     auto temp_result = new char[length + 1];
 
-    memset(temp_result, '0', strlen(temp_result));
+    memset(temp_result, 0, strlen(temp_result));
 
     int remaining = 0;
     int summation_result;
@@ -30,5 +30,9 @@ char *sum(char *x, char *y) {
     if (remaining > 0) temp_result[length] = (char) (remaining + '0'); else temp_result[length] = '\0';
     reverse(temp_result, temp_result + strlen(temp_result));
 
-    return temp_result;
+    int true_length = strlen(temp_result);
+    auto result = new char[true_length + 1];
+    for (int i = 0; i < true_length; ++i) result[i] = temp_result[i];
+
+    return result;
 }

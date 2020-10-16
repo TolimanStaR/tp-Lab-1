@@ -9,12 +9,12 @@ using namespace std;
 signed main() {
 
     int ans;
-    char ***r = new char **;
+    char **r = nullptr;
 
-    split(r, &ans, (char *) "& _ _I&J ust Wann a&Hit &re cord! &f_f&  _.&\0", '&');
+    split(&r, &ans, (char *) "& _ _I&J ust Wann a&Hit &re cord! &f_f&  _.&\0", '&');
 
     for (int i = 0; i < ans; ++i) {
-        cout << (*r)[i] << endl;
+        cout << r[i] << endl;
     }
 
     return 0;
