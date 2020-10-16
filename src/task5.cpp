@@ -13,24 +13,25 @@ void split(char ***result, int *N, char *buf, char ch) {
     int string_count = 0;
     unsigned int last = 0;
 
-    for (unsigned int i = 0; i < strlen(buf); ++i) {
-        if (buf[i] == ch && i - last > 1) {
-            string_count++;
-            last = i;
-        }
-    }
-
-    int lengths[100];
-    int l = 0;
-    last = 0;
-
-    for (unsigned int i = 0; i < strlen(buf); ++i) {
-        if (buf[i] == ch && i - last > 1) {
-            lengths[l] = i - last - 1;
-            l++;
-            last = i;
-        }
-    }
+//    for (unsigned int i = 0; i < strlen(buf); ++i) {
+//        if (buf[i] == ch && i - last > 1) {
+//            string_count++;
+//            last = i;
+//        }
+//    }
+//
+//    int lengths[100];
+//    int l = 0;
+//    last = 0;
+//
+//    for (unsigned int i = 0; i < strlen(buf); ++i) {
+//        if (buf[i] == ch && i - last > 1) {
+//            lengths[l] = i - last - 1;
+//            l++;
+//            last = i;
+//        }
+//    }
+//    *N=3;
 
 //    (*result) = new char *[string_count];
 //
