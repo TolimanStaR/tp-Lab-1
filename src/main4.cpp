@@ -13,7 +13,7 @@ signed main() {
 //    cout << sum((char *) "9", (char *) "9") << endl;
     cout << sum((char *) "99999999999999999999", (char *) "1") << endl;
 //    cout << sum((char *) "0", (char *) "0") << endl;
-    cout << sum((char *) "123456789", (char *) "00001") << endl;
+    cout << sum((char *) "123456789", (char *) "000000001") << endl;
 
     return 0;
 }
