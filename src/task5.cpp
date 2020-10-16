@@ -5,8 +5,48 @@
 #include "task5.h"
 
 void split(char ***result, int *N, char *buf, char ch) {
-    *N=3;
-    (*result)= reinterpret_cast<char **>(0xffff);
+
+//    *N=48787;
+//    (*result)= reinterpret_cast<char **>(0xffff);
+
+    string buffer(buf);
+
+    int strings = 1;
+    for (auto &x: buffer) strings += (x == ch ? 1 : 0);
+
+    vector<int> sizes;
+    int current = 0;
+    for (char i : buffer) {
+        if (i == ch) {
+            sizes.push_back(current);
+            current = 0;
+        } else current++;
+    }
+
+    auto temp = new char *[strings];
+    (*N) = strings;
+    for (int i = 0; i < strings; ++i) temp[i] = new char[sizes[i]];
+    vector<int> edges;
+    edges.push_back(-1);
+
+    for (int i = 0; i < buffer.size(); ++i) {
+        if (buffer[i] == ch) {
+            edges.push_back(i);
+        }
+    }
+    edges.push_back(buffer.size());
+
+    for (auto x: edges) cout << x << ' ';
+    cout << endl;
+
+
+    for (int i = 0; i < strings; ++i) {
+        strcpy(temp[i], (buffer.substr(edges[i] + 1, edges[i + 1])).c_str());
+        temp[i][sizes[i]] = '\0';
+    }
+    *result = temp;
+
+
 
 //    int result_index = 0;
 //    int result_string_index = 0;
