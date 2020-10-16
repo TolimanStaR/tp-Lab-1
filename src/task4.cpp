@@ -31,10 +31,9 @@ char *sum(char *x, char *y) {
     reverse(temp_result, temp_result + strlen(temp_result));
 
     int true_length = strlen(temp_result);
-    auto result = new char[true_length];
-    memset(result, 0, true_length);
+    auto result = new char[true_length + 1];
+    memset(result, 0, true_length + 1);
     for (int i = 0; i < true_length; ++i) result[i] = temp_result[i];
 
     return result;
-
 }

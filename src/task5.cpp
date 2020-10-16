@@ -31,13 +31,16 @@ void split(char ***result, int *N, char *buf, char ch) {
     }
 
     *result = new char *[string_count];
+
     for (int i = 0; i < string_count; ++i)
         (*result)[i] = new char[lengths[i] + 1];
 
     for (int i = 0; i < string_count; ++i)
         memset((*result)[i], 0, lengths[i] + 1);
 
-    while (buf[buf_index] != '\0') {
+    string buffer = buf;
+
+    while (buf_index < buffer.size()) {
         if (buf[buf_index] == ch) {
             if (result_string_index > 0) {
                 result_index++;
