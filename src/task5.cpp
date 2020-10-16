@@ -20,35 +20,37 @@ void split(char ***result, int *N, char *buf, char ch) {
         }
     }
 
-    vector<int> lengths;
+    int lengths[100];
+    int l = 0;
     last = 0;
 
     for (unsigned int i = 0; i < strlen(buf); ++i) {
         if (buf[i] == ch && i - last > 1) {
-            lengths.push_back(i - last - 1);
+            lengths[l] = i - last - 1;
+            l++;
             last = i;
         }
     }
 
-    (*result) = new char *[string_count];
-
-    for (int i = 0; i < string_count; ++i)
-        (*result)[i] = new char[lengths[i] + 1];
-
-    for (int i = 0; i < string_count; ++i)
-        memset((*result)[i], 0, lengths[i] + 1);
-
-    while (buf[buf_index] != '\0') {
-        if (buf[buf_index] == ch) {
-            if (result_string_index > 0) {
-                result_index++;
-                result_string_index = 0;
-            }
-        } else {
-            (*result)[result_index][result_string_index] = buf[buf_index];
-            result_string_index++;
-        }
-        buf_index++;
-    }
-    (*N) = result_index;
+//    (*result) = new char *[string_count];
+//
+//    for (int i = 0; i < string_count; ++i)
+//        (*result)[i] = new char[lengths[i] + 1];
+//
+//    for (int i = 0; i < string_count; ++i)
+//        memset((*result)[i], 0, lengths[i] + 1);
+//
+//    while (buf[buf_index] != '\0') {
+//        if (buf[buf_index] == ch) {
+//            if (result_string_index > 0) {
+//                result_index++;
+//                result_string_index = 0;
+//            }
+//        } else {
+//            (*result)[result_index][result_string_index] = buf[buf_index];
+//            result_string_index++;
+//        }
+//        buf_index++;
+//    }
+//    (*N) = result_index;
 }
