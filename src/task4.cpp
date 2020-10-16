@@ -32,6 +32,7 @@ char *sum(char *x, char *y) {
 
     int true_length = strlen(temp_result);
     auto result = new char[true_length];
+    memset(result, 0, true_length);
     for (int i = 0; i < true_length; ++i) result[i] = temp_result[i];
 
     return result;
