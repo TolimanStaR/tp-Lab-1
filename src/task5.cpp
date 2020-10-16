@@ -6,12 +6,12 @@
 
 void split(char ***result, int *N, char *buf, char ch) {
 
-    int result_index = 0;
-    int result_string_index = 0;
-    int buf_index = 0;
-
-    int string_count = 0;
-    unsigned int last = 0;
+//    int result_index = 0;
+//    int result_string_index = 0;
+//    int buf_index = 0;
+//
+//    int string_count = 0;
+//    unsigned int last = 0;
 
 //    for (unsigned int i = 0; i < strlen(buf); ++i) {
 //        if (buf[i] == ch && i - last > 1) {
