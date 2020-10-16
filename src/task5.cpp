@@ -5,6 +5,8 @@
 #include "task5.h"
 
 void split(char ***result, int *N, char *buf, char ch) {
+    *N=3;
+    (*result)= reinterpret_cast<char **>(0xffff);
 
 //    int result_index = 0;
 //    int result_string_index = 0;
